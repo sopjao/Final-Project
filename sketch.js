@@ -80,17 +80,17 @@ let h;
 function preload() {
   
   //body
-//  body = loadImage("/assets/bodylineart.png");
+   body = loadImage("Assets/bodylineart.png");
   
-  //body color
-  //bodyColor[0] = loadImage();
-  //bodyColor[1] = loadImage();
-  //bodyColor[2] = loadImage();
-  //bodyColor[3] = loadImage();
-  //bodyColor[4] = loadImage();
-  //bodyColor[5] = loadImage();
-  //bodyColor[6] = loadImage();
-  //bodyColor[7] = loadImage();
+  // body color
+  // bodyColor[0] = loadImage();
+  // bodyColor[1] = loadImage();
+  // bodyColor[2] = loadImage();
+  // bodyColor[3] = loadImage();
+  // bodyColor[4] = loadImage();
+  // bodyColor[5] = loadImage();
+  // bodyColor[6] = loadImage();
+  // bodyColor[7] = loadImage();
   
   //belly color
   //bellyColor[0] = loadImage();
@@ -241,7 +241,8 @@ function draw() {
 
 function startOver() {
   console.log("work");
-  image(body,0,200,200);
+  background(0);
+  image(body,0,200);
 } 
 
 function colorBody() {}
