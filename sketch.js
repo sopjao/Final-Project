@@ -1,64 +1,22 @@
 //bodycolor bC Array
-let bCArray = ['']
-let bodyColorArray = ['']
+let bodyColorArray = [];
 
 //bellycolor bLC Array
-let bLCArray = ['']
-let bellyColorArray = ['']
-
-//spiketype sT Array
-let sTArray = ['']
-let spikeTypeArray = ['']
+let bellyColorArray = [];
 
 //spike1Color s1C  Array
-let s1CArray = ['']
-let spike1ColorArray = ['']
-
-//spike2Color s2C Array
-let s2CArray = ['']
-let spike2ColorArray = ['']
-
-//spike3Color s3C Array
-let s3CArray = ['']
-let spike3ColorArray = ['']
-
-//spike4Color s4C Array
-let s4CArray = ['']
-let spike4ColorArray = ['']
-
-//spike5Color s5C Array
-let s5CArray = ['']
-let spike5ColorArray = ['']
+let spike1ColorArray = [];
 
 //mouth m Array
-let mArray = ['']
-let mouthArray = ['']
+let mouthArray = [];
 
 //eye e Array
-let eArray = ['']
-let eyeArray = ['']
+let eyeArray = [];
 
 //hat h Array
-let hArray = ['']
-let hatArray = ['']
+let hatArray = [];
 
 let body;
-let bodyColor = [];
-let bellyColor = [];
-let spikeType = [];
-let spike1;
-let spike1Color = [];
-let spike2;
-let spike2Color = [];
-let spike3;
-let spike3Color = [];
-let spike4;
-let spike4Color = [];
-let spike5;
-let spike5Color = [];
-let mouth = [];
-let eye = [];
-let hat = [];
 
 //random variables, (number generated for arrays variable selection)
 //some variables need to be connected:
@@ -66,12 +24,7 @@ let hat = [];
 
 let bC;
 let blC;
-let sT;
 let s1C;
-let s2C;
-let s3C;
-let s4C;
-let s5C;
 let m;
 let e;
 let h;
@@ -80,113 +33,58 @@ let h;
 function preload() {
   
   //body
-   body = loadImage("Assets/bodylineart.png");
+   body = loadImage('Assets/bodylineart.png');
   
   // body color
-  // bodyColor[0] = loadImage();
-  // bodyColor[1] = loadImage();
-  // bodyColor[2] = loadImage();
-  // bodyColor[3] = loadImage();
-  // bodyColor[4] = loadImage();
-  // bodyColor[5] = loadImage();
-  // bodyColor[6] = loadImage();
-  // bodyColor[7] = loadImage();
+  bodyColorArray[0] = loadImage('Assets/bodypurple.png');
+  bodyColorArray[1] = loadImage('Assets/bodyblue.png');
+  bodyColorArray[2] = loadImage('Assets/bodygreen.png');
+  bodyColorArray[3] = loadImage('Assets/bodyyellow.png');
+  bodyColorArray[4] = loadImage('Assets/bodyorange.png');
+  bodyColorArray[5] = loadImage('Assets/bodyred.png');
+  bodyColorArray[6] = loadImage('Assets/bodypink.png');
+  bodyColorArray[7] = loadImage('Assets/bodywhite.png');
   
   //belly color
-  //bellyColor[0] = loadImage();
-  //bellyColor[1] = loadImage();
-  //bellyColor[2] = loadImage();
-  //bellyColor[3] = loadImage();
-  //bellyColor[4] = loadImage();
-  //bellyColor[5] = loadImage();
-  //bellyColor[6] = loadImage();
-  //bellyColor[7] = loadImage();
+  bellyColorArray[0] = loadImage('Assets/bellypurple.png');
+  bellyColorArray[1] = loadImage('Assets/bellyblue.png');
+  bellyColorArray[2] = loadImage('Assets/bellygreen.png');
+  bellyColorArray[3] = loadImage('Assets/bellyyellow.png');
+  bellyColorArray[4] = loadImage('Assets/bellyorange.png');
+  bellyColorArray[5] = loadImage('Assets/bellyred.png');
+  bellyColorArray[6] = loadImage('Assets/bellypink.png');
+  bellyColorArray[7] = loadImage('Assets/bellygrey.png');
   
-  //spike1
-  //spike1 = loadImage();
-  
-  //spike1 color
-  //spike1Color[0] = loadImage();
-  //spike1Color[1] = loadImage();
-  //spike1Color[2] = loadImage();
-  //spike1Color[3] = loadImage();
-  //spike1Color[4] = loadImage();
-  //spike1Color[5] = loadImage();
-  //spike1Color[6] = loadImage();
-  //spike1Color[7] = loadImage();
-  
-  //spike2
-  //spike2 = loadImage();
-  
-  //spike2 color
-  //spike2Color[0] = loadImage();
-  //spike2Color[1] = loadImage();
-  //spike2Color[2] = loadImage();
-  //spike2Color[3] = loadImage();
-  //spike2Color[4] = loadImage();
-  //spike2Color[5] = loadImage();
-  //spike2Color[6] = loadImage();
-  //spike2Color[7] = loadImage();
-  
-  //spike3
-  //spike3 = loadImage();
-  
-  //spike3 color
-  //spike3Color[0] = loadImage();
-  //spike3Color[1] = loadImage();
-  //spike3Color[2] = loadImage();
-  //spike3Color[3] = loadImage();
-  //spike3Color[4] = loadImage();
-  //spike3Color[5] = loadImage();
-  //spike3Color[6] = loadImage();
-  //spike3Color[7] = loadImage();
-  
-  //spike4
-  //spike4 = loadImage();
-  
-  //spike4 color
-  //spike4Color[0] = loadImage();
-  //spike4Color[1] = loadImage();
-  //spike4Color[2] = loadImage();
-  //spike4Color[3] = loadImage();
-  //spike4Color[4] = loadImage();
-  //spike4Color[5] = loadImage();
-  //spike4Color[6] = loadImage();
-  //spike4Color[7] = loadImage();
-  
-  //spike5
-  //spike5 = loadImage();
-  
-  //spike5 color
-  //spike5Color[0] = loadImage();
-  //spike5Color[1] = loadImage();
-  //spike5Color[2] = loadImage();
-  //spike5Color[3] = loadImage();
-  //spike5Color[4] = loadImage();
-  //spike5Color[5] = loadImage();
-  //spike5Color[6] = loadImage();
-  //spike5Color[7] = loadImage();
-  
+ //spikes 
+  spike1ColorArray[0] = loadImage('Assets/spike1purple.png');
+  spike1ColorArray[1] = loadImage('Assets/spike1blue.png');
+  spike1ColorArray[2] = loadImage('Assets/spike1green.png');
+  spike1ColorArray[3] = loadImage('Assets/spike1yellow.png');
+  spike1ColorArray[4] = loadImage('Assets/spike1orange.png');
+  spike1ColorArray[5] = loadImage('Assets/spike1red.png');
+  spike1ColorArray[6] = loadImage('Assets/spike1pink.png');
+  spike1ColorArray[7] = loadImage('Assets/spike1grey.png');
+
   //mouth
-  //mouth1 = loadImage();
-  //mouth2 = loadImage();
-  //mouth3 = loadImage();
-  //mouth4 = loadImage();
-  //mouth5 = loadImage();
+  mouthArray[0] = loadImage('Assets/mouth1.png');
+  mouthArray[1] = loadImage('Assets/mouth2.png');
+  mouthArray[2] = loadImage('Assets/mouth3.png');
+  mouthArray[3] = loadImage('Assets/mouth4.png');
+  mouthArray[4] = loadImage('Assets/mouth5.png');
   
   //eye
-  //eye1 = loadImage(); 
-  //eye2 = loadImage();
-  //eye3 = loadImage();
-  //eye4 = loadImage();
-  //eye5 = loadImage();
+  eyeArray[0] = loadImage('Assets/eye1.png'); 
+  eyeArray[1] = loadImage('Assets/eye2.png');
+  eyeArray[2] = loadImage('Assets/eye3.png');
+  eyeArray[3] = loadImage('Assets/eye4.png');
+  eyeArray[4] = loadImage('Assets/eye5.png');
   
   //hat
-  //hat1 = loadImage();
-  //hat2 = loadImage();
-  //hat3 = loadImage();
-  //hat4 = loadImage();
-  //hat5 = loadImage();
+  hatArray[0] = loadImage('Assets/cowboyhat.png');
+  hatArray[1] = loadImage('Assets/helicopterhat.png');
+  hatArray[2] = loadImage('Assets/paperhat.png');
+  hatArray[3] = loadImage('Assets/partyhat.png');
+  hatArray[4] = loadImage('Assets/vikinghat.png');
   
 }
 
@@ -195,44 +93,37 @@ function setup() {
   createCanvas(600, 600);
   background(255);
  
-  var button = createButton('Re-Do');
+  var button = createButton('Clear');
   button.class('button');
   button.mousePressed(startOver);
   
   var button1 = createButton('Body Color');
-  button.class('button');
-  button.id('button1');
+  button1.class('button');
   button1.mousePressed(colorBody);
-  
-  var button2 = createButton('Belly Color');
-  button.class('button');
-  button.id('button2');
-  button2.mousePressed(colorBelly);
-  
-  var button3 = createButton('Spike Type');
-  button.class('button');
-  button.id('button3');
-  button3.mousePressed(drawSpike);
-  
-  var button4 = createButton('Spike Color');
-  button.class('button');
-  button.id('button4');
-  button4.mousePressed(colorSpike);
-  
+
   var button5 = createButton('Mouth Type');
-  button.class('button');
-  button.id('button5');
+  button5.class('button');
   button5.mousePressed(drawMouth);
   
+  var button2 = createButton('Belly Color');
+  button2.class('button');
+  button2.mousePressed(colorBelly);
+  
+  var button4 = createButton('Spike Color');
+  button4.class('button');
+  button4.mousePressed(colorSpike);
+  
   var button6 = createButton('Eye Type');
-  button.class('button');
-  button.id('button6');
+  button6.class('button');
   button6.mousePressed(drawEye);
   
   var button7 = createButton('Hat');
-  button.class('button');
-  button.id('button7');
+  button7.class('button');
   button7.mousePressed(drawHat);
+
+  var button8 = createButton('Randomize');
+  button8.class('button');
+  button8.mousePressed(dinoRando);
   
 }
 
@@ -240,24 +131,60 @@ function draw() {
 }
 
 function startOver() {
-  console.log("work");
-  background(0);
-  image(body,0,200);
+ background(255);
 } 
 
-function colorBody() {}
+function colorBody() {
+ //background(255);
+ let bC = int(random(bodyColorArray.length));
+ image(bodyColorArray[bC],int(random()), int(random()), width,height);
+ image(body,0,0,width,height)
+}
 
-function colorBelly() {}
+function colorBelly() {
+ //background(255);
+ let blC = int(random(bellyColorArray.length));
+ image(bellyColorArray[blC],int(random()), int(random()), width,height);
+}
 
-function drawSpike() {}
+function colorSpike() {
+  let s1C = int(random(spike1ColorArray.length));
+  image(spike1ColorArray[s1C],int(random()), int(random()), width,height);
+}
 
-function colorSpike() {}
+function drawMouth() {
+  let m = int(random(mouthArray.length));
+  image(mouthArray[m],int(random()), int(random()), width,height);
+}
 
-function drawMouth() {}
+function drawEye() {
+  let e = int(random(eyeArray.length));
+  image(eyeArray[e],int(random()), int(random()), width,height);
+}
 
-function drawEye() {}
+function drawHat() {
+  let h = int(random(hatArray.length));
+  image(hatArray[h],int(random()), int(random()), width,height);
+  image(body,0,0,width,height);
+}
 
-function drawHat() {}
+function dinoRando() {
+  background(255);
+  let bC = int(random(bodyColorArray.length));
+ image(bodyColorArray[bC],int(random()), int(random()), width,height);
+ image(body,0,0,width,height)
+  let blC = int(random(bellyColorArray.length));
+ image(bellyColorArray[blC],int(random()), int(random()), width,height);
+  let s1C = int(random(spike1ColorArray.length));
+ image(spike1ColorArray[s1C],int(random()), int(random()), width,height);
+  let m = int(random(mouthArray.length));
+ image(mouthArray[m],int(random()), int(random()), width,height);
+  let e = int(random(eyeArray.length));
+ image(eyeArray[e],int(random()), int(random()), width,height);
+  let h = int(random(hatArray.length));
+ image(hatArray[h],int(random()), int(random()), width,height);
+ image(body,0,0,width,height);
+}
 
 
 

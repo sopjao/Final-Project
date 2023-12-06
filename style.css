@@ -5,14 +5,23 @@ html, body {
 }
 canvas {
   display: block;
+  border: dashed;
+  border-left-width: 5px;
+  border-right-width: 5px;
+  border-top-width: 5px;
+  border-bottom-width: 5px;
   margin:auto;
-  padding-top: 50px;
-  padding-bottom: 50px;
+  border-color: blanchedalmond;
 }
 
 h1{
   color: white;
+  font-size:50px;
   font-family:'Jazz LET', fantasy
+}
+
+.sub_header {
+  color: white;
 }
 
 .button {
