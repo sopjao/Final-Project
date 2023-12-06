@@ -124,6 +124,10 @@ function setup() {
   var button8 = createButton('Randomize');
   button8.class('button');
   button8.mousePressed(dinoRando);
+
+  var button9 = createButton('Save Image');
+  button9.class('button');
+  button9.mousePressed(saveImage);
   
 }
 
@@ -186,8 +190,9 @@ function dinoRando() {
  image(body,0,0,width,height);
 }
 
-
-
+function saveImage() {
+  saveCanvas();
+}
 
 
 
